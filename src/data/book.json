@@ -1,0 +1,92 @@
+{
+    "books": [
+      {
+        "isbn": "9786075294551",
+        "title": "Entrevista con el vampiro",
+        "subtitle": "Interview with the Vampire",
+        "author": "Anne Rice",
+        "published": "12 de abril de 1976",
+        "publisher": "Alfred A. Knopf",
+        "pages": 266,
+        "description": "Un  joven  periodista  logra  que  un  auténtico  vampiro  le  confíe  sus  masíntimos  secretos,  explicando  en  una  apasionante  confesión  cómo  setransformó en semejante ser.",
+        "website": "https://es.wikipedia.org/wiki/Entrevista_con_el_vampiro",
+        "downloads": [
+          {
+            "type": "PDF",
+            "link": "http://descargar.lelibros.online/Anne%20Rice/Entrevista%20con%20el%20Vampiro%20(183)/Entrevista%20con%20el%20Vampiro%20-%20Anne%20Rice.pdf"
+          }
+        ],
+        "thumbnail": "http://lelibros.online/uploads/2016/09/descargar-libro-entrevista-con-el-vampiro-en-pdf-epub-mobi-o-leer-online.jpg"
+      },
+      {
+        "isbn": "9788490707845",
+        "title": "Lestat el vampiro",
+        "subtitle": "The Vampire Lestat",
+        "author": "Anne Rice",
+        "published": "1985",
+        "publisher": "Alfred A. Knopf",
+        "pages": 508,
+        "description": "Lestat el vampiro es una novela escrita por Anne Rice, y es el segundo libro de las Crónicas Vampíricas, continuando la saga comenzada por el libro Entrevista con el Vampiro",
+        "website": "https://es.wikipedia.org/wiki/Lestat_el_vampiro",
+        "downloads": [
+          {
+            "type": "PDF",
+            "link": "http://descargar.lelibros.online/Anne%20Rice/Lestat%20el%20Vampiro%20(456)/Lestat%20el%20Vampiro%20-%20Anne%20Rice.pdf"
+          },
+          {
+            "type": "MOVI",
+            "link": "http://descargar.lelibros.online/Anne%20Rice/Lestat%20el%20Vampiro%20(456)/Lestat%20el%20Vampiro%20-%20Anne%20Rice.mobi"
+          },
+          {
+            "type": "EPUB",
+            "link": "http://descargar.lelibros.online/Anne%20Rice/Lestat%20el%20Vampiro%20(456)/Lestat%20el%20Vampiro%20-%20Anne%20Rice.epub"
+          }
+        ],
+        "thumbnail": "http://lelibros.online/uploads/2016/10/descargar-libro-lestat-el-vampiro-cronicas-vampiricas-en-pdf-epub-mobi-o-leer-online.jpg"
+      },
+      {
+        "isbn": "9788432210167",
+        "title": "Una Familia Feliz",
+        "subtitle": "",
+        "author": " David Safier",
+        "published": "14 de junio de 2012",
+        "publisher": "Seix Barral",
+        "pages": 258,
+        "description": "La familia Van Kieren está al borde del caos. La librería de la madre, Emma, está en la bancarrota; el padre trabaja demasiado; la hija adolescente no aprueba ni una asignatura, y al hijo pequeño la chica que le gusta lo humilla. Para colmo, después de una fiesta, una bruja hechiza a los Van Kieren y los condena a convertirse en el personaje del que van disfrazados: de repente son una vampira, Frankenstein, la momia y el hombre lobo. Para romper el hechizo, este singular cuarteto partirá en busca de la bruja por medio mundo. Y en el camino se encontrará con un montón de monstruos auténticos: vampiros, lagartos gigantes y turistas alemanes en viaje organizado. Pero por mucho que busquen, los Van Kieren no podrán dejar de ser monstruos hasta que vuelvan a creer en la felicidad familiar.",
+        "website": "http://lelibros.online/libro/descargar-libro-una-familia-feliz-en-pdf-epub-mobi-o-leer-online/",
+        "downloads": [
+          {
+            "type": "PDF",
+            "link": "http://descargar.lelibros.online/David%20Safier/Una%20Familia%20Feliz%20(108)/Una%20Familia%20Feliz%20-%20David%20Safier.pdf"
+          },
+          {
+            "type": "MOVI",
+            "link": "http://descargar.lelibros.online/David%20Safier/Una%20Familia%20Feliz%20(108)/Una%20Familia%20Feliz%20-%20David%20Safier.mobi"
+          },{
+            "type": "EPUB",
+            "link": "http://descargar.lelibros.online/David%20Safier/Una%20Familia%20Feliz%20(108)/Una%20Familia%20Feliz%20-%20David%20Safier.epub"
+          }
+        ],
+        "thumbnail": "http://lelibros.online/uploads/2017/04/descargar-libro-una-familia-feliz-en-pdf-epub-mobi-o-leer-online.jpg"
+      },
+
+      {
+        "isbn": "",
+        "title": "",
+        "subtitle": "",
+        "author": "",
+        "published": "",
+        "publisher": "",
+        "pages": 340,
+        "description": "",
+        "website": "",
+        "downloads": [
+          {
+            "type": "PDF",
+            "link": ""
+          }
+        ],
+        "thumbnail": ""
+      }
+    ]
+  }
