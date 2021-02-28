@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-    <span class="nav-title">BookMe</span>
+    <span class="nav-title">BooKed</span>
     <input type="checkbox" id="icon-menu" class="menu-icon">
     <label class="text-menu-icon" for="icon-menu">
         <svg
@@ -92,4 +92,4 @@
         }
 	}
 
-</style>
+</style>    
