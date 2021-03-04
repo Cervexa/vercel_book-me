@@ -9,7 +9,7 @@
         <Book value={value}/>
 	{/each}
     </div>
-
+    <Book value={3}/>
 </section>
 
 <style>

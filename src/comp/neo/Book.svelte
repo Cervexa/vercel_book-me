@@ -22,7 +22,14 @@ import { append } from 'svelte/internal';
     <article>
         <button onclick="document.getElementById('{isbn}fdx').style.display = 'flex';" class="btninfo">
             <div class="front">
-                <img src={thumbnail} alt={title}>
+                {#if thumbnail!=""}
+                    <img src={thumbnail} alt={title}>
+                {:else}
+                    <div class="book-face">
+                        <h3>{title}</h3>
+                        <span>{author}</span>
+                    </div>
+                {/if}
                 <div class="data">
                     <p class="title">{title}</p>
                     <p class="author">{author} | {publisher}</p>
@@ -35,21 +42,23 @@ import { append } from 'svelte/internal';
                 <div class="box">
                     <div class="info">
                         <header>
-                            <img src={thumbnail} alt={title}>
+                            {#if thumbnail!=""}
+                                <img src={thumbnail} alt={title}>
+                            {:else}
+                                <div class="book-face">
+                                    <h3>{title}</h3>
+                                    <span>{author}</span>
+                                </div>
+                            {/if}
                             <div>
                                 <span class="title">{title}</span>
                                 <span class="author">{subtitle} | {author}</span>
                                 <br>
-                                <span class="prevtext">ISBN</span>
-                                <p>{isbn}</p>
-                                <span class="prevtext">Fehca de publicacion</span>
-                                <p>{published}</p>
-                                <span class="prevtext">Editorial</span>
-                                <p>{publisher}</p>
-                                <span class="prevtext">Paginas</span>
-                                <p>{pages}</p>
-                                <span class="prevtext">Website</span>
-                                <a href={website}>Here</a>
+                                <span class="prevtext">Categorias <p>{#each book[value].category as type, i }{book[value].category[i].ctg}{/each}</p></span>
+                                <span class="prevtext">Publicacion <p>{published}</p></span>
+                                <span class="prevtext">Editorial <p>{publisher}</p></span>
+                                <span class="prevtext">Paginas <p>{pages}</p></span>
+                                <span class="prevtext">Website <a href={website}>Click Here</a></span>
                             </div>
                         </header>
                         <h3>Descripcion</h3>
@@ -69,6 +78,39 @@ import { append } from 'svelte/internal';
 </div>
 
 <style>
+    article .front .book-face{
+        background: #333;
+        color: #ccc;
+        width: calc(55px - 20px);
+        height: calc(85px - 20px);
+        font-size: .4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: right;
+        padding: 10px;
+    }article .front .book-face *{
+        display: block;
+        width: 100%;
+        margin:0;
+        padding:0%;
+    }article .back .book-face{
+        background: #333;
+        color: #ccc;
+        width: calc(100% - 20px);
+        height: calc(265px - 20px);
+        font-size: .4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: right;
+        padding: 10px;
+    }article .back .book-face *{
+        display: block;
+        width: 100%;
+        margin:0;
+        padding:0%;
+    }
     p{margin: 0; word-wrap: break-word;}
     br{margin-top:1rem; display:block}
     .content{
@@ -88,14 +130,14 @@ import { append } from 'svelte/internal';
     }
      article .front{
         display: grid;
-        grid-template-columns: 15% 1fr;
+        grid-template-columns: auto 1fr;
         text-align: left;
         padding: 5px 0;
         justify-content: left;
         align-items: center;
     } article .front img{
-        width: 100%;
-        height: auto;
+        width: 55px;
+        height: 85px;
     } article .front .data{
         padding-left: 5px;
     } article .front .data .title{
@@ -144,23 +186,6 @@ import { append } from 'svelte/internal';
     .box::-webkit-scrollbar {
         -webkit-appearance: none;
     }
-    .box::-webkit-scrollbar:vertical {
-        width:10px;
-    }
-    .box::-webkit-scrollbar-button:increment,.box::-webkit-scrollbar-button {
-        display: none;
-    } 
-    .box::-webkit-scrollbar:horizontal {
-        height: 10px;
-    }
-    .box::-webkit-scrollbar-thumb {
-        background-color: #ccc;
-        border-radius: 20px;
-        border: 3px solid #f1f2f3;
-    }
-    .box::-webkit-scrollbar-track {
-        border-radius: 10px;  
-    }
      article .diff .back .info{
         padding-bottom: 3rem;
     } article .diff .back .info header{
@@ -178,11 +203,10 @@ import { append } from 'svelte/internal';
         display:block;
         padding-right: 1rem;
         color: #222;
-    } article .diff .back{
-        position: relative;
     } article .diff .back .info img{
         width: 100%;
-        height: auto;
+        height: 265px;
+        object-fit: cover;
         display: inline-block;
     } article .diff .back .read{
         position: absolute;
@@ -200,9 +224,14 @@ import { append } from 'svelte/internal';
         opacity: 1;
         font-weight: 600;
         font-size: .99em;
-    } article .diff .back .info p{
+        margin-bottom: 5px;
+    } article .diff .back .info .prevtext *{
+        display: inline;
         padding-left: 7px;
         font-size: .9em;
+        float: right;
+        font-weight: 400; 
+        opacity: .9;
     }
 
     .downloadFile{
@@ -213,11 +242,20 @@ import { append } from 'svelte/internal';
         font-weight: 600;
         margin-left: 5px;
     }
+    @media (max-width: 440px){
+        article .diff .back .info img{
+            width: 100%;
+            max-height:205px;
+        }article .diff .back .info .book-face{
+            width: calc(100% - 20px);
+            height: calc(185px - 20px);
+        }
+    }
     @media (max-width: 640px){
          article .front{
             border-bottom: 1px solid #eeeeee;
         }article .diff .back{
-            position: absolute;
+            position: fixed;
             max-width: calc(100% - 2rem);
             padding: 1.5rem 1rem;
             height: 80vh;
